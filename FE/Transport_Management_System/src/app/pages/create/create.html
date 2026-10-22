@@ -1,0 +1,406 @@
+<main class="overviews-page">
+  <header class="overviews-page__header">
+    <div>
+      <h1>New Booking</h1>
+      <p class="overviews-page__intro">
+        Keep client work, project leads, and key contacts in one place.
+      </p>
+    </div>
+  </header>
+
+  <section class="project-panel project-form" aria-labelledby="project-form-title">
+    <div class="project-panel__heading">
+      <div>
+        <p class="projects-page__eyebrow">Basic Information</p>
+      </div>
+    </div>
+
+    <form class="container-fluid">
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Customer -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+              Customer <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <select class="form-select" id="customerName">
+                <option value="">Select Customer</option>
+                <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
+                <option value="2">PT. CARGILL INDONESIA</option>
+                <option value="3">PT. NESTLE INDONESIA</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Date -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="booking-date">
+              Date <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="bookingDate"
+                class="form-control"
+                id="booking-date"
+                type="date"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 2: Reference No & Reference Date -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Reference No. -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="referenceNo">
+              Reference No. <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                class="form-control"
+                id="referenceNo"
+                type="text"
+                placeholder="Masukkan nomor referensi"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Reference Date -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="referenceDate">
+              Reference Date
+            </label>
+            <div class="col-sm-5">
+              <input class="form-control" id="referenceDate" type="date" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 3: Shipper & Consignee -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Shipper + Checkbox -->
+        <div class="col-12 col-lg-6">
+          <div class="row">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="shipper">
+              Shipper
+            </label>
+            <div class="col-sm-8">
+              <select class="form-select mb-2" id="shipper">
+                <option value=""></option>
+                <option value="">SHIPPER</option>
+              </select>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="checkCustomerShipper" />
+                <label class="form-check-label" for="checkCustomerShipper">Customer</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Consignee + Checkbox -->
+        <div class="col-12 col-lg-6">
+          <div class="row">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="consignee">
+              Consignee
+            </label>
+            <div class="col-sm-8">
+              <select class="form-select mb-2" id="consignee">
+                <option value=""></option>
+                <option value="">Consignee</option>
+              </select>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="checkCustomerConsignee" />
+                <label class="form-check-label" for="checkCustomerConsignee">Customer</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 4: Shipper Ref & Consignee Ref -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Shipper Ref. No/Date -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" style="line-height: 1.2">
+              Shipper Ref.<br />No/Date
+            </label>
+            <div class="col-sm-8">
+              <div class="row g-2">
+                <div class="col-7">
+                  <input class="form-control" type="text" placeholder="Shipper Ref. No." />
+                </div>
+                <div class="col-5">
+                  <input class="form-control" type="date" value="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Consignee Ref. No/Date -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" style="line-height: 1.2">
+              Consignee Ref.<br />No/Date
+            </label>
+            <div class="col-sm-8">
+              <div class="row g-2">
+                <div class="col-7">
+                  <input class="form-control" type="text" placeholder="Consignee Ref. No." />
+                </div>
+                <div class="col-5">
+                  <input class="form-control" type="date" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 5: Remarks (Hanya di Kiri penuh bawah) -->
+      <div class="row mb-3">
+        <div class="col-12 col-lg-6">
+          <div class="row">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="remarks">
+              Remarks
+            </label>
+            <div class="col-sm-8">
+              <textarea class="form-control" id="remarks" rows="4"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- table service -->
+    <div class="container mt-5">
+      <div class="custom-tabs">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Service
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div
+            class="tab-pane fade show active brd"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <table class="table">
+              <thead class="table-service">
+                <tr>
+                  <th scope="col">Service Class</th>
+                  <th scope="col">Project</th>
+                  <th scope="col">Vehicle Type</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Route</th>
+                  <th scope="col">ETD</th>
+                  <th scope="col">ETA</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn btn-warning" (click)="openXl(content)">Add Service</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal template -->
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Add Service</h4>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="modal.dismiss('Cross click')"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form class="container-fluid">
+          <div class="row mb-3">
+            <!-- Kolom Kiri: Customer -->
+            <div class="col-12 col-lg-6">
+              <div class="row align-items-center">
+                <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+                  Service Class <span class="text-danger">*</span>
+                </label>
+                <div class="col-sm-8">
+                  <select class="form-select" id="serviceClass">
+                    <option value="">Select an option</option>
+                    <option value="1">CNT - Contract</option>
+                    <option value="2">ONC - On Call</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Kolom Kanan: Date -->
+            <div class="col-12 col-lg-6">
+              <div class="row align-items-center">
+                <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+                  Package Class <span class="text-danger">*</span>
+                </label>
+                <div class="col-sm-8">
+                  <select class="form-select" id="packageClass">
+                    <option value="">Select an option</option>
+                    <option value="1">Halal</option>
+                    <option value="2">Non Halal</option>
+                    <option value="2">Mixed</option>
+                    <option value="2">Not Classified</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <!-- Kolom Kiri: Project -->
+            <div class="col-12 col-lg-6">
+              <div class="row align-items-center">
+                <label class="col-sm-4 col-form-label text-sm-end fw-bold">
+                  Project <span class="text-danger">*</span>
+                </label>
+                <div class="col-sm-8">
+                  <select class="form-select" id="project">
+                    <option value="">Select an option</option>
+                    <option value="1">P.000027 SHI</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Kolom Kanan: Date -->
+            <div class="col-12 col-lg-6">
+              <div class="row align-items-center">
+                <label class="col-sm-4 col-form-label text-sm-end fw-bold">
+                  Vehicle Type <span class="text-danger">*</span>
+                </label>
+                <div class="col-sm-8">
+                  <select class="form-select" id="packageClass">
+                    <option value="">Select an option</option>
+                    <option value="1">Big Fit</option>
+                    <option value="2">Blind Van</option>
+                    <option value="2">Carry</option>
+                    <option value="2">CDD</option>
+                    <option value="1">CDD Long</option>
+                    <option value="2">CDD Long AC</option>
+                    <option value="2">CDE</option>
+                    <option value="2">Grandmax</option>
+                    <option value="2">SIGRA</option>
+                    <option value="2">Trailer-4x2</option>
+                    <option value="2">Trailer-6x4</option>
+                    <option value="2">Wing Box</option>
+                    <option value="2">WB AC Tronton</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <!-- Kolom Kiri: Route -->
+            <div class="col-12 col-lg-6">
+              <div class="row align-items-center">
+                <label class="col-sm-4 col-form-label text-sm-end fw-bold">
+                  Route <span class="text-danger">*</span>
+                </label>
+                <div class="col-sm-8">
+                  <select class="form-select" id="serviceClass">
+                    <option value="">Select an route</option>
+                    <option value="1">Bekasi-Marunda</option>
+                    <option value="2">Cakung-Bekasi</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Kolom Kanan: Quantity -->
+            <div class="col-12 col-lg-6">
+              <div class="row align-items-center">
+                <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+                  Quantity <span class="text-danger">*</span>
+                </label>
+                <div class="col-sm-8">
+                  <input class="form-control" type="date" value="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <!-- Kolom Kiri: ETD -->
+            <div class="col-12 col-lg-6">
+              <div class="row align-items-center">
+                <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="booking-date">
+                  ETD <span class="text-danger">*</span>
+                </label>
+                <div class="col-sm-5">
+                  <input
+                    formControlName="bookingDate"
+                    class="form-control"
+                    id="booking-date"
+                    type="date"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Kolom Kanan: ETA -->
+            <div class="col-12 col-lg-6">
+              <div class="row align-items-center">
+                <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="booking-date">
+                  ETA <span class="text-danger">*</span>
+                </label>
+                <div class="col-sm-5">
+                  <input
+                    formControlName="bookingDate"
+                    class="form-control"
+                    id="booking-date"
+                    type="date"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">
+          Close
+        </button>
+        <button type="button" class="btn btn-success" (click)="modal.close('Close click')">
+          Save Changes
+        </button>
+      </div>
+    </ng-template>
+
+    <!-- Save and Cancel -->
+    <div class="container-sm mt-4">
+      <button class="btn btn-success m-1">Save Change</button>
+      <button class="btn btn-danger m-1">Cancel</button>
+    </div>
+  </section>
+</main>

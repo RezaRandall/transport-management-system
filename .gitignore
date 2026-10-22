@@ -1,0 +1,40 @@
+# ==========================================
+# 1. FRONTEND (ANGULAR) CONFIG
+# ==========================================
+# Mengabaikan file environment asli
+/FE/Transport_Management_System/src/environments/environment.ts
+/FE/Transport_Management_System/src/environments/environment.development.ts
+
+# JANGAN mengabaikan file template/sample
+!/FE/Transport_Management_System/src/environments/environment.sample.ts
+
+# Mengabaikan dependensi dan hasil build Angular
+**/node_modules/
+/FE/Transport_Management_System/dist/
+/FE/Transport_Management_System/.angular/
+
+# ==========================================
+# 2. BACKEND (.NET) CONFIG
+# ==========================================
+# Mengabaikan SELURUH file cache Visual Studio (.vs)
+.vs/
+**/.vs/
+*.suo
+*.user
+
+# Mengabaikan hasil kompilasi dan cache .NET
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+
+# Mengabaikan file rahasia backend jika ada
+*.Secrets.json
+.env
+
+# ==========================================
+# 3. OS FILES
+# ==========================================
+.DS_Store
+Thumbs.db

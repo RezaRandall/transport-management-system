@@ -1,0 +1,173 @@
+<div class="workspace-shell" [ngClass]="isSideBarOpen ? '' : 'sidebar-collapsed'">
+  <aside class="sidebar" aria-label="Main navigation">
+    <a class="sidebar-brand" aria-label="TransitFlow dashboard">
+      <span class="sidebar-brand-mark">T</span>
+      <span class="sidebar-brand-name">Transit<span>Flow</span></span>
+    </a>
+
+    <div class="sidebar-section-label">WORKSPACE</div>
+    <nav class="sidebar-nav">
+      <label
+        class="nav-item active dashboard-option"
+        for="nav-dashboard"
+        routerLink="/admin/dashboard"
+      >
+        <input id="nav-dashboard" name="sidebarDestination" type="radio" checked />
+        <i class="fa-solid fa-cubes"></i>
+        <span>Dashboard</span>
+      </label>
+      <details class="nav-dropdown">
+        <summary class="nav-item">
+          <i class="fa-solid fa-book"></i>
+          <span>Booking</span><span class="nav-count">8</span><span class="nav-chevron"></span>
+        </summary>
+        <div class="nav-submenu">
+          <label class="submenu-option" for="nav-overview" routerLink="/admin/overview">
+            <input id="nav-overview" name="sidebarDestination" type="radio" />
+            <span>Overview</span>
+          </label>
+          <label class="submenu-option" for="nav-create" routerLink="/admin/create">
+            <input id="nav-create" name="sidebarDestination" type="radio" />
+            <span>Create</span>
+          </label>
+        </div>
+      </details>
+      <details class="nav-dropdown">
+        <summary class="nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Job Order</span><span class="nav-chevron"></span>
+        </summary>
+        <div class="nav-submenu">
+          <label class="submenu-option" for="nav-road" routerLink="/admin/road">
+            <input id="nav-road" name="sidebarDestination" type="radio" />
+            <span>Road</span>
+          </label>
+          <label
+            class="submenu-option"
+            for="nav-transmittal"
+            routerLink="/admin/transmittial-document"
+          >
+            <input id="nav-transmittal" name="sidebarDestination" type="radio" />
+            <span>Transmittal Document</span>
+          </label>
+        </div>
+      </details>
+      <details class="nav-dropdown">
+        <summary class="nav-item">
+          <i class="fa-solid fa-money-bill-wheat"></i>
+          <span>Finance</span><span class="nav-chevron"></span>
+        </summary>
+        <div class="nav-submenu">
+          <label class="submenu-option" for="nav-imprest" routerLink="/admin/imprest">
+            <input id="nav-imprest" name="sidebarDestination" type="radio" />
+            <span>Imprest</span>
+          </label>
+          <label class="submenu-option" for="nav-bank-payment" routerLink="/admin/bank-payment">
+            <input id="nav-bank-payment" name="sidebarDestination" type="radio" />
+            <span>Bank Payment</span>
+          </label>
+        </div>
+      </details>
+      <details class="nav-dropdown">
+        <summary class="nav-item">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span>Contract</span><span class="nav-chevron"></span>
+        </summary>
+        <div class="nav-submenu">
+          <label class="submenu-option" for="nav-customer" routerLink="/admin/customer">
+            <input id="nav-customer" name="sidebarDestination" type="radio" />
+            <span>Customer</span>
+          </label>
+          <label class="submenu-option" for="nav-clerk" routerLink="/admin/clerk">
+            <input id="nav-clerk" name="sidebarDestination" type="radio" />
+            <span>Clerk</span>
+          </label>
+          <label class="submenu-option" for="nav-driver" routerLink="/admin/driver">
+            <input id="nav-driver" name="sidebarDestination" type="radio" />
+            <span>Driver</span>
+          </label>
+        </div>
+      </details>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="support-status">
+        <span class="status-dot"></span
+        ><span><strong>All systems operational</strong><small>Last checked just now</small></span>
+      </div>
+      <div class="sidebar-footnote">TRANSITFLOW <span>·</span> v1.0.0</div>
+    </div>
+  </aside>
+
+  <div class="workspace-main">
+    <header class="topbar">
+      <div class="topbar-leading">
+        <button
+          (click)="isSideBarOpen = !isSideBarOpen"
+          [attr.aria-expanded]="isSideBarOpen"
+          class="sidebar-toggle"
+          type="button"
+          aria-label="Toggle sidebar"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="breadcrumb">
+          <span>Workspace</span><span class="breadcrumb-divider">/</span><strong>Dashboard</strong>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <label class="workspace-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.3" />
+            <path d="m15.5 15.5 4 4" />
+          </svg>
+          <input type="search" placeholder="Search workspace" aria-label="Search workspace" />
+          <kbd>⌘ K</kbd>
+        </label>
+        <button class="notification-button" type="button" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 9a6 6 0 0 0-12 0c0 7-2.5 7-2.5 9h17C20.5 16 18 16 18 9ZM10 21h4" />
+          </svg>
+          <span></span>
+        </button>
+        <div class="topbar-divider"></div>
+        <details class="user-menu">
+          <summary class="user-summary">
+            <span class="user-avatar">JD</span>
+            <span class="user-copy">
+              <strong>Jordan Davis</strong>
+              <small>Operations Manager</small>
+            </span>
+            <span class="user-chevron"></span>
+          </summary>
+          <div class="user-dropdown">
+            <div class="user-dropdown-heading">
+              <strong>Jordan Davis</strong><small>Operations Manager</small>
+            </div>
+            <a>Profile</a>
+            <a class="user-logout">Logout</a>
+          </div>
+        </details>
+        <!-- <button class="logout-button" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10 17l5-5-5-5M15 12H3M13 4h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6" />
+          </svg>
+          <span>Log out</span>
+        </button> -->
+      </div>
+    </header>
+
+    <main class="workspace-content">
+      <!-- <div class="page-heading">
+        <div>
+          <p class="eyebrow">{{ date | date: 'EEEE, MMMM d, y' }}</p>
+          <h1>{{ today() | greeting }}, {{ loggedUserData?.employeeName }}</h1>
+          <p>Here is what is happening across your workforce today.</p>
+        </div>
+      </div> -->
+      <section aria-label="Workforce summary">
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+  </div>
+</div>

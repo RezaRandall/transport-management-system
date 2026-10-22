@@ -1,0 +1,184 @@
+<main class="overviews-page">
+  <header class="overviews-page__header">
+    <div>
+      <p class="overviews-page__eyebrow">WORKSPACE / DELIVERY</p>
+      <h1>Booking</h1>
+      <p class="overviews-page__intro">
+        Keep client work, project leads, and key contacts in one place.
+      </p>
+    </div>
+    <button class="app-button app-button--primary" /* (click)="showFormProject()"  */ type="button">
+      <span aria-hidden="true">+</span>
+      New project
+    </button>
+  </header>
+
+  <section class="project-panel project-form" aria-labelledby="project-form-title">
+    <div class="project-panel__heading">
+      <div>
+        <p class="projects-page__eyebrow">Search Option</p>
+      </div>
+    </div>
+
+    <form class="row g-3">
+      <div class="row">
+        <div class="col-6 col-sm">
+          <label class="form-label" for="booking-date">Booking Date</label>
+          <input
+            formControlName="bookingDate"
+            class="form-control"
+            id="booking-date"
+            name="bookingDate"
+            type="date"
+          />
+        </div>
+        <div class="col-12 col-md-6 col-xl-4"></div>
+        <div class="col-12 col-md-6 col-xl-4 d-flex justify-content-end align-items-end">
+          <label class="form-label col-12" for="new-booking"></label>
+          <input
+            formControlName="newBooking"
+            class="btn btn-warning"
+            id="new-booking"
+            name="newBooking"
+            type="button"
+            value="New Booking"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-4">
+          <label class="form-label" for="customer-name">Customer</label>
+          <select class="form-select" id="customerName">
+            <option value="">Select Customer</option>
+            <option value="1">SHELL INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <label class="form-label" for="project-name">Project</label>
+          <select class="form-select" id="projectName">
+            <option value="">Select Project</option>
+            <option value="1">SHELL INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <label class="form-label" for="booking-no">Booking No.</label>
+          <input
+            formControlName="bookingNo"
+            class="form-control"
+            id="booking-no"
+            name="bookingNo"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-4">
+          <label class="form-label" for="job-order">Job Order</label>
+          <input
+            formControlName="jobOrder"
+            class="form-control"
+            id="job-order"
+            name="jobOrder"
+            type="text"
+          />
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <label class="form-label" for="vehicle-no">Vehicle No.</label>
+          <select class="form-select" id="vehicleNo">
+            <option value="">Select Vehicle</option>
+            <option value="1">SHELL INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <label class="form-label" for="driver-name">Driver</label>
+          <select class="form-select" id="driverName">
+            <option value="">Select Driver</option>
+            <option value="1">SHELL INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-4">
+          <label class="form-label" for="route-name">Route</label>
+          <select
+            class="form-select"
+            id="routeNameId"
+            aria-label="Example select with button addon"
+          >
+            <option value="">Select Route</option>
+            <option value="1">SHELL INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <label class="form-label" for="client-name">Service Class</label>
+          <select class="form-select" id="clientName">
+            <option value="">Select Service</option>
+            <option value="1">SHELL INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+        <div class="col-12 col-sm-6 col-xl-4">
+          <label class="form-label" for="advan-search">Advance Search</label>
+          <select
+            class="form-select"
+            id="advanSearch"
+            aria-label="Example select with button addon"
+          >
+            <option value="">Reference no.</option>
+            <option value="1">SPB No.</option>
+            <option value="2">DN No.</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-xl-4">
+          <label class="form-label" for="status-name">Status</label>
+          <select class="form-select" id="statusName">
+            <option value="">Select Status</option>
+            <option value="1">Created</option>
+            <option value="2">Initiated</option>
+            <option value="3">Completed</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="project-panel my-3">
+    <div class="row my-2">
+      <span>Result</span>
+    </div>
+    <table class="table">
+      <thead class="table-overview">
+        <tr>
+          <th scope="col">Booking Code</th>
+          <th scope="col">Booking Date</th>
+          <th scope="col">Customer</th>
+          <th scope="col">Reference</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>* Click search to view data</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>

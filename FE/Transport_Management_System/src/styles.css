@@ -1,0 +1,92 @@
+:root {
+  --tms-primary: #0d9488;
+  --tms-primary-dark: #0a766e;
+  --tms-secondary: #134e4a;
+  --tms-accent: #f59e0b;
+  --tms-background: #f1f5f9;
+  --tms-surface: #ffffff;
+  --tms-text: #1e293b;
+  --tms-muted: #64748b;
+  --tms-border: #dce5ea;
+  --tms-success: #16836f;
+  --tms-font: 'Aptos', 'Segoe UI Variable', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--tms-background);
+  color: var(--tms-text);
+  font-family: var(--tms-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.app-button--primary {
+  color: #fff;
+  background: var(--tms-primary);
+  box-shadow: 0 5px 12px rgba(13, 148, 136, 0.18);
+}
+
+.app-button--primary:hover {
+  background: var(--tms-primary-dark);
+}
+
+.app-button--secondary {
+  color: var(--tms-primary-dark);
+  border-color: var(--border);
+  background: #fff;
+}
+
+.app-button--secondary:hover {
+  border-color: var(--tms-primary);
+  color: var(--tms-primary);
+}
+
+.app-button--danger {
+  color: #b91c1c;
+  border-color: #fecaca;
+  background: #fff;
+}
+
+.app-button--danger:hover {
+  color: #fff;
+  border-color: #b91c1c;
+  background: #b91c1c;
+}
+
+.app-button--primary:hover {
+  background: var(--tms-primary-dark);
+}
