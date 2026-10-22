@@ -16,6 +16,13 @@
 # ==========================================
 # 2. BACKEND (.NET) CONFIG
 # ==========================================
+# Mengabaikan file appsettings konfigurasi database asli
+/BE/TransportManagementSystem/appsettings.json
+/BE/TransportManagementSystem/appsettings.Development.json
+
+# JANGAN mengabaikan file template/sample appsettings
+!/BE/TransportManagementSystem/appsettings.Sample.json
+
 # Mengabaikan SELURUH file cache Visual Studio (.vs)
 .vs/
 **/.vs/
