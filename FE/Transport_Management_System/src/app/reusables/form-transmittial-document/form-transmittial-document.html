@@ -1,0 +1,224 @@
+<form class="container-fluid">
+  <div class="row mb-3">
+    <!-- Kolom Kanan: Date -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="job-date"> Job Date </label>
+        <div class="col-8">
+          <div class="dp-hidden position-absolute">
+            <div class="input-group">
+              <input
+                name="datepicker"
+                class="form-control"
+                ngbDatepicker
+                #datepicker="ngbDatepicker"
+                [autoClose]="'outside'"
+                (dateSelect)="onDateSelection($event)"
+                [displayMonths]="2"
+                [dayTemplate]="t"
+                outsideDays="hidden"
+                [startDate]="fromDate!"
+                tabindex="-1"
+              />
+              <ng-template #t let-date let-focused="focused">
+                <span
+                  class="custom-day"
+                  [class.focused]="focused"
+                  [class.range]="isRange(date)"
+                  [class.faded]="isHovered(date) || isInside(date)"
+                  (mouseenter)="hoveredDate = date"
+                  (mouseleave)="hoveredDate = null"
+                >
+                  {{ date.day }}
+                </span>
+              </ng-template>
+            </div>
+          </div>
+          <div class="input-group">
+            <input
+              (click)="datepicker.toggle()"
+              #dpFromDate
+              class="form-control"
+              placeholder="dd-mm-yyyy"
+              name="dpFromDate"
+              [value]="fromDate | customDateFormatter: toDate"
+              (input)="fromDate = validateInput(fromDate, dpFromDate.value)"
+            />
+            <button class="btn btn-outline-secondary" type="button" (click)="datepicker.toggle()">
+              <i class="fa-regular fa-calendar-days"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Kolom Kiri: Customer -->
+  <div class="col-12 col-lg-6">
+    <div class="row align-items-center"></div>
+  </div>
+  <div class="row mb-3">
+    <!-- Kolom Kiri: Customer -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Customer
+        </label>
+        <div class="col-sm-8">
+          <select class="form-select" id="customerName">
+            <option value="">Select Customer</option>
+            <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Project
+        </label>
+        <div class="col-sm-8">
+          <select class="form-select" id="customerName">
+            <option value="">Select Project</option>
+            <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <!-- Kolom Kiri: Customer -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Booking No.
+        </label>
+        <div class="col-sm-8">
+          <input
+            formControlName="bookingDate"
+            class="form-control"
+            id="booking-date"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Job Order No.
+        </label>
+        <div class="col-sm-8">
+          <input
+            formControlName="bookingDate"
+            class="form-control"
+            id="booking-date"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <!-- Kolom Kiri: Customer -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Vehicle No.
+        </label>
+        <div class="col-sm-8">
+          <select class="form-select" id="customerName">
+            <option value="">Select Vehicle No.</option>
+            <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Driver
+        </label>
+        <div class="col-sm-8">
+          <select class="form-select" id="customerName">
+            <option value="">Select Driver</option>
+            <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <!-- Kolom Kiri: Customer -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Route
+        </label>
+        <div class="col-sm-8">
+          <select class="form-select" id="customerName">
+            <option value="">Select Route</option>
+            <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Service Class
+        </label>
+        <div class="col-sm-8">
+          <select class="form-select" id="customerName">
+            <option value="">Select Service Class</option>
+            <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
+            <option value="2">PT. CARGILL INDONESIA</option>
+            <option value="3">PT. NESTLE INDONESIA</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <!-- Kolom Kiri: Shipper Ref. No/Date -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" style="line-height: 1.2">
+          Advance Search
+        </label>
+        <div class="col-sm-8">
+          <div class="row g-2">
+            <div class="col-7">
+              <select class="form-select" id="customerName">
+                <option value="">Select option</option>
+                <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
+                <option value="2">PT. CARGILL INDONESIA</option>
+                <option value="3">PT. NESTLE INDONESIA</option>
+              </select>
+            </div>
+            <div class="col-5">
+              <input class="form-control" type="text" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- Save and Peint -->
+<div class="container-sm mt-2">
+  <button class="btn btn-primary btn-sm m-1">Search</button>
+  <ng-content select="[btnPrint]"></ng-content>
+</div>
