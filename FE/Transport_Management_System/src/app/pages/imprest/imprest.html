@@ -1,1 +1,42 @@
-<p>imprest works!</p>
+<main class="overviews-page">
+  <header class="overviews-page__header">
+    <div>
+      <h1>Imprest</h1>
+    </div>
+  </header>
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <button ngbNavLink>Petty Cash</button>
+      <ng-template ngbNavContent> </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <button ngbNavLink>Imprest</button>
+      <ng-template ngbNavContent> </ng-template>
+    </li>
+    <li [ngbNavItem]="3">
+      <button ngbNavLink>Mutation</button>
+      <ng-template ngbNavContent let-active> </ng-template>
+    </li>
+  </ul>
+
+  <section class="project-panel" aria-labelledby="project-form-title">
+    <div class="project-panel__heading">
+      <div>
+        <p class="projects-page__eyebrow">Search Option</p>
+      </div>
+    </div>
+    @if (active() === 2 || active() === 3) {
+      <app-form-imprest-and-mutation></app-form-imprest-and-mutation>
+    } @else {
+      <app-form-petty-cash> </app-form-petty-cash>
+    }
+  </section>
+
+  <section class="project-panel my-3">
+    @if (active() === 2 || active() === 3) {
+      <app-table-imprest-and-mutation> </app-table-imprest-and-mutation>
+    } @else {
+      <app-table-imprest-petty-cash> </app-table-imprest-petty-cash>
+    }
+  </section>
+</main>

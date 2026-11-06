@@ -14,9 +14,8 @@
 }
 
 .table-service th {
-border-color: var(--project-text);
   color: #fff;
-  background: var(--project-text);
+  background: var(--project-teal);
 }
 
 .overviews-page__header,

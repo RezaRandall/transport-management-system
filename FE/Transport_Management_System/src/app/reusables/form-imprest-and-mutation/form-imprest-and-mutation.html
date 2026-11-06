@@ -1,0 +1,148 @@
+<form class="container-fluid">
+  <div class="row mb-3">
+    <!-- Kolom Kanan: Date -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="job-date">
+          Document Date
+        </label>
+        <div class="col-8">
+          <div class="dp-hidden position-absolute">
+            <div class="input-group">
+              <input
+                name="datepicker"
+                class="form-control"
+                ngbDatepicker
+                #datepicker="ngbDatepicker"
+                [autoClose]="'outside'"
+                (dateSelect)="onDateSelection($event)"
+                [displayMonths]="2"
+                [dayTemplate]="t"
+                outsideDays="hidden"
+                [startDate]="fromDate!"
+                tabindex="-1"
+              />
+              <ng-template #t let-date let-focused="focused">
+                <span
+                  class="custom-day"
+                  [class.focused]="focused"
+                  [class.range]="isRange(date)"
+                  [class.faded]="isHovered(date) || isInside(date)"
+                  (mouseenter)="hoveredDate = date"
+                  (mouseleave)="hoveredDate = null"
+                >
+                  {{ date.day }}
+                </span>
+              </ng-template>
+            </div>
+          </div>
+          <div class="input-group">
+            <input
+              (click)="datepicker.toggle()"
+              #dpFromDate
+              class="form-control"
+              placeholder="dd-mm-yyyy"
+              name="dpFromDate"
+              [value]="fromDate | customDateFormatter: toDate"
+              (input)="fromDate = validateInput(fromDate, dpFromDate.value)"
+            />
+            <button class="btn btn-outline-secondary" type="button" (click)="datepicker.toggle()">
+              <i class="fa-regular fa-calendar-days"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-4 d-flex justify-content-end">
+      <input
+        formControlName="newBooking"
+        class="btn btn-warning"
+        id="new-booking"
+        name="newBooking"
+        type="button"
+        value="Create"
+        /* routerLink="/admin/create" */
+      />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <!-- Kolom Kiri: Customer -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+          Document No.
+        </label>
+        <div class="col-sm-8">
+          <input
+            formControlName="documentNo"
+            class="form-control"
+            id="document-no"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center"></div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <!-- Kolom Kiri: Shipper Ref. No/Date -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" style="line-height: 1.2">
+          Advance Search
+        </label>
+        <div class="col-sm-8">
+          <div class="row g-2">
+            <div class="col-7">
+              <select class="form-select" id="shipperRefNo">
+                <option value="">Select Option</option>
+                <option value="1">Option A</option>
+                <option value="2">Option B</option>
+              </select>
+            </div>
+            <div class="col-5">
+              <input class="form-control" type="text" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Kolom Kanan: Consignee Ref. No/Date -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <label class="col-sm-4 col-form-label text-sm-end fw-bold" style="line-height: 1.2">
+          Status
+        </label>
+        <div class="col-sm-8">
+          <div class="row g-2">
+            <div class="col-7">
+              <select class="form-select" id="consigneeRefNo">
+                <option value="">Select Option</option>
+                <option value="1">Option A</option>
+                <option value="2">Option B</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Row 5: Checkbox -->
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-center">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="showMoreResults" />
+          <label
+            class="form-check-label text-secondary"
+            for="showMoreResults"
+            style="font-size: 0.8rem"
+          >
+            Show more than 100 results
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

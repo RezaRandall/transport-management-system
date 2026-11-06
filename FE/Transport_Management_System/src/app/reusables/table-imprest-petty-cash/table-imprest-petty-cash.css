@@ -1,0 +1,12 @@
+.table-overview th {
+  border-color: var(--project-teal);
+  color: #fff;
+  background: var(--project-teal);
+  font-size: 13px; /* Menggunakan ukuran absolut (px/rem) lebih stabil daripada persen */
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 12px; /* Memberikan ruang di dalam cell agar tidak menumpuk */
+  border: 1px solid #e0e0e0;
+  white-space: nowrap; /* Mencegah teks turun ke bawah/membungkus */
+}

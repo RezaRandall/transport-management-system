@@ -1,0 +1,22 @@
+.overviews-page {
+  --project-teal: var(--teal, #0d9488);
+  --project-dark-teal: var(--dark-teal, #134e4a);
+  --project-text: var(--text, #1e293b);
+  --project-muted: var(--muted, #64748b);
+  --project-border: var(--border, #e2e8f0);
+  padding: 8px 0 28px;
+  color: var(--project-text);
+}
+
+.table-overview th {
+  border-color: var(--project-teal);
+  color: #fff;
+  background: var(--project-teal);
+  font-size: 13px; /* Menggunakan ukuran absolut (px/rem) lebih stabil daripada persen */
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 12px; /* Memberikan ruang di dalam cell agar tidak menumpuk */
+  border: 1px solid #e0e0e0;
+  white-space: nowrap; /* Mencegah teks turun ke bawah/membungkus */
+}

@@ -1,0 +1,142 @@
+<form class="container-fluid">
+  <div class="row">
+    <!-- Kolom Kiri (Input Fields) -->
+    <div class="col-lg-7 col-md-9">
+      <!-- Row 1: Type (Radio) -->
+      <div class="row mb-3 align-items-center">
+        <label class="col-sm-4 text-sm-end fw-bold col-form-label"
+          >Type <span class="text-danger">*</span></label
+        >
+        <div class="col-sm-8">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="searchType"
+              id="typeBank"
+              value="bank"
+              checked
+            />
+            <label class="form-check-label text-secondary" for="typeBank">Bank</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="searchType"
+              id="typeCash"
+              value="cash"
+            />
+            <label class="form-check-label text-secondary" for="typeCash">Cash</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Account (Select) -->
+      <div class="row mb-3 align-items-center">
+        <label for="accountSelect" class="col-sm-4 text-sm-end fw-bold col-form-label"
+          >Account <span class="text-danger">*</span></label
+        >
+        <div class="col-sm-8">
+          <select class="form-select form-select-sm form-select-placeholder" id="accountSelect">
+            <option selected disabled>Select an option</option>
+            <option value="1">Account 1</option>
+            <option value="2">Account 2</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Row 3: Transaction Date (Input Group) -->
+      <div class="row mb-3 align-items-center">
+        <label for="transactionDate" class="col-sm-4 text-sm-end fw-bold col-form-label"
+          >Transaction Date <span class="text-danger">*</span></label
+        >
+        <div class="col-8">
+          <div class="dp-hidden position-absolute">
+            <div class="input-group">
+              <input
+                name="datepicker"
+                class="form-control"
+                ngbDatepicker
+                #datepicker="ngbDatepicker"
+                [autoClose]="'outside'"
+                (dateSelect)="onDateSelection($event)"
+                [displayMonths]="2"
+                [dayTemplate]="t"
+                outsideDays="hidden"
+                [startDate]="fromDate!"
+                tabindex="-1"
+              />
+              <ng-template #t let-date let-focused="focused">
+                <span
+                  class="custom-day"
+                  [class.focused]="focused"
+                  [class.range]="isRange(date)"
+                  [class.faded]="isHovered(date) || isInside(date)"
+                  (mouseenter)="hoveredDate = date"
+                  (mouseleave)="hoveredDate = null"
+                >
+                  {{ date.day }}
+                </span>
+              </ng-template>
+            </div>
+          </div>
+          <div class="input-group">
+            <input
+              (click)="datepicker.toggle()"
+              #dpFromDate
+              class="form-control"
+              placeholder="dd-mm-yyyy"
+              name="dpFromDate"
+              [value]="fromDate | customDateFormatter: toDate"
+              (input)="fromDate = validateInput(fromDate, dpFromDate.value)"
+            />
+            <button class="btn btn-outline-secondary" type="button" (click)="datepicker.toggle()">
+              <i class="fa-regular fa-calendar-days"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Type Secondary (Select) -->
+      <div class="row mb-3 align-items-center">
+        <label for="secondaryType" class="col-sm-4 text-sm-end fw-bold col-form-label">Type</label>
+        <div class="col-sm-6">
+          <select class="form-select form-select-sm form-select-placeholder" id="secondaryType">
+            <option selected disabled>Select an option</option>
+            <option value="1">Option A</option>
+            <option value="2">Option B</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Row 5: Checkbox -->
+      <div class="row mb-3">
+        <div class="col-sm-8 offset-sm-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="showMoreResults" />
+            <label
+              class="form-check-label text-secondary"
+              for="showMoreResults"
+              style="font-size: 0.8rem"
+            >
+              Show more than 100 results
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kolom Kanan (Tombol Kuning / Non Operational Cost) -->
+    <div class="col-lg-5 col-md-3 text-start text-lg-end mb-3 mb-lg-0">
+      <button type="button" class="btn btn-warning btn-sm rounded-1 px-3">
+        Non Operational Cost
+      </button>
+    </div>
+  </div>
+
+  <!-- Bagian Footer Form (Tombol Search) -->
+  <div class="border-t pt-3 mt-3 text-start">
+    <button type="submit" class="btn btn-primary btn-sm px-4 rounded-1">Search</button>
+  </div>
+</form>
