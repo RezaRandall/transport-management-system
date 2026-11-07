@@ -129,11 +129,326 @@
 
     <!-- Kolom Kanan (Tombol Kuning / Non Operational Cost) -->
     <div class="col-lg-5 col-md-3 text-start text-lg-end mb-3 mb-lg-0">
-      <button type="button" class="btn btn-warning btn-sm rounded-1 px-3">
+      <button
+        type="button"
+        class="btn btn-warning btn-sm rounded-1 px-3"
+        (click)="openNonOps(contentNonOps)"
+      >
         Non Operational Cost
       </button>
     </div>
   </div>
+
+  <!-- modal template -->
+  <ng-template #contentNonOps let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Add Service</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form class="container-fluid">
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Cashier Name  -->
+          <div class="col-12 col-lg-6">
+            <div class="row align-items-center">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+                Cashier Name <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="customerName"
+                  placeholder="Enter Cashier Name"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Kolom Kanan: Date -->
+          <div class="col-12 col-lg-6">
+            <div class="row align-items-center">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="booking-date">
+                Date <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-5">
+                <input class="form-control" id="booking-date" type="date" value="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Transfer to -->
+          <div class="col-12 col-lg-6">
+            <div class="row align-items-center">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+                Transfer to <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="searchType"
+                    id="typeDriver"
+                    value="bank"
+                    checked
+                  />
+                  <label class="form-check-label text-secondary" for="typeDriver">Driver</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="searchType"
+                    id="typeClerk"
+                    value="cash"
+                  />
+                  <label class="form-check-label text-secondary" for="typeClerk">Clerk</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BARIS 3: Shipper & Consignee -->
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Driver name  -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="shipper">
+                Driver Name <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="shipper">
+                  <option value=""></option>
+                  <option value="">SHIPPER</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Kolom Kanan: Asset code -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="consignee">
+                Asset Code <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="consignee">
+                  <option value=""></option>
+                  <option value="">Consignee</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BARIS 3: Vehicle Type  & Route -->
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Vehicle Type   -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="shipper">
+                Vehicle Type <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="shipper">
+                  <option value=""></option>
+                  <option value="">SHIPPER</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Kolom Kanan: Route -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="consignee">
+                Route
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="consignee">
+                  <option value=""></option>
+                  <option value="">Consignee</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BARIS 3: Vehicle Type  & Route -->
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Vehicle Type   -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="shipper">
+                Vehicle Type <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="shipper">
+                  <option value=""></option>
+                  <option value="">SHIPPER</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Kolom Kanan: Route -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="consignee">
+                Route <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="consignee">
+                  <option value=""></option>
+                  <option value="">Consignee</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BARIS 3: Office name  & Project name -->
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Office name   -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="shipper">
+                Office Name <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="shipper">
+                  <option value=""></option>
+                  <option value="">SHIPPER</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Kolom Kanan: Project name -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="consignee">
+                Project Name <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="consignee">
+                  <option value=""></option>
+                  <option value="">Consignee</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Row 5: Checkbox -->
+        <div class="row mb-3">
+          <div class="col-sm-4 offset-sm-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="showMoreResults" />
+              <label
+                class="form-check-label text-secondary"
+                for="showMoreResults"
+                style="font-size: 0.8rem"
+              >
+                Show more than 100 results
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- BARIS 3: Change name  & Based on -->
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Change name   -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="shipper">
+                Change Name <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="shipper">
+                  <option value=""></option>
+                  <option value="">SHIPPER</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Kolom Kanan: Based on -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="consignee">
+                Based on <span class="text-danger">*</span>
+              </label>
+              <div class="col-sm-8">
+                <select class="form-select mb-2" id="consignee">
+                  <option value=""></option>
+                  <option value="">Consignee</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BARIS 3: Quantity  & Rate -->
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Quantity   -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="quantity">
+                Quantity
+              </label>
+              <div class="col-sm-8">
+                <input class="form-control" type="text" value="" />
+              </div>
+            </div>
+          </div>
+          <!-- Kolom Kanan: Rate -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="consignee">
+                Rate
+              </label>
+              <div class="col-sm-8">
+                <input class="form-control" type="text" value="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BARIS 3: Amount -->
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Amount   -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="quantity">
+                Amount
+              </label>
+              <div class="col-sm-8">
+                <input class="form-control" type="text" value="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BARIS 3: Remark -->
+        <div class="row mb-3">
+          <!-- Kolom Kiri: Remark   -->
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="quantity">
+                Remark
+              </label>
+              <div class="col-sm-8">
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">
+        Close
+      </button>
+      <button type="button" class="btn btn-success" (click)="modal.close('Close click')">
+        Save Changes
+      </button>
+    </div>
+  </ng-template>
 
   <!-- Bagian Footer Form (Tombol Search) -->
   <div class="border-t pt-3 mt-3 text-start">

@@ -1,15 +1,22 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, TemplateRef } from '@angular/core';
 import {
   NgbCalendar,
   NgbDate,
   NgbDateParserFormatter,
   NgbInputDatepicker,
+  NgbModal,
 } from '@ng-bootstrap/ng-bootstrap';
 import { CustomDateFormatterPipe } from '../../pipes/custom-date-formatter-pipe';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  imports: [NgbInputDatepicker, CustomDateFormatterPipe, ReactiveFormsModule, FormsModule],
+  imports: [
+    ReactiveFormsModule,
+    NgbInputDatepicker,
+    CustomDateFormatterPipe,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   selector: 'app-form-petty-cash',
   styleUrl: './form-petty-cash.css',
   templateUrl: './form-petty-cash.html',
@@ -62,5 +69,12 @@ export class FormPettyCash {
     return parsed && this.calendar.isValid(NgbDate.from(parsed))
       ? NgbDate.from(parsed)
       : currentValue;
+  }
+
+  nonOpsForm!: FormGroup;
+  private readonly modalService = inject(NgbModal);
+
+  openNonOps(contentNonOps: TemplateRef<any>) {
+    this.modalService.open(contentNonOps, { size: 'xl' });
   }
 }
