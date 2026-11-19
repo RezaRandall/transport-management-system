@@ -1,1 +1,315 @@
-<p>customer works!</p>
+<main class="overviews-page">
+  <header class="overviews-page__header">
+    <div>
+      <h1>New Customer</h1>
+    </div>
+  </header>
+
+  <section class="project-panel project-form" aria-labelledby="project-form-title">
+    <div class="project-panel__heading">
+      <div>
+        <p class="projects-page__eyebrow">Customer Information</p>
+      </div>
+    </div>
+
+    <form class="container-fluid">
+      <!-- BARIS 1: Customer & Abbreviation  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Customer -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+              Customer Name <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="customerName"
+                class="form-control"
+                id="customerName"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Date -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="booking-date">
+              Abbreviation <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="abbreviation"
+                class="form-control"
+                id="abbreviation"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 2: address & city  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: address -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="address">
+              Address <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="address"
+                class="form-control"
+                id="address"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: city -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="city">
+              City <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-5">
+              <input formControlName="city" class="form-control" id="city" type="text" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 3: contact department & contact email  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: contact department -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="contactDepartment">
+              Contact Department
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="contactDepartment"
+                class="form-control"
+                id="contactDepartment"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: contact email -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="contactEmail">
+              Contact Email
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="contactEmail"
+                class="form-control"
+                id="contactEmail"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 4: contact phone & country  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: contact phone -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="contactPhone">
+              Contact Phone
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="contactPhone"
+                class="form-control"
+                id="contactPhone"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: country -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="country">
+              Country
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="country"
+                class="form-control"
+                id="country"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 5: Credit limit & sales person  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Credit limit -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="creditLimit">
+              Credit Limit
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="creditLimit"
+                class="form-control"
+                id="creditLimit"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: sales person -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="salesPerson">
+              Sales Person
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="salesPerson"
+                class="form-control"
+                id="salesPerson"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 6: state & tax registration  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: state -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="state"> State </label>
+            <div class="col-sm-8">
+              <input type="text" formControlName="state" class="form-control" id="state" value="" />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: tax registration -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="taxRegistration">
+              Tax Registration
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="taxRegistration"
+                class="form-control"
+                id="taxRegistration"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 7: payment term & zip code  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: payment term -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="paymentTerm">
+              Payment Term
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="paymentTerm"
+                class="form-control"
+                id="paymentTerm"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: zip code -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="zipCode">
+              Zip Code
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="zipCode"
+                class="form-control"
+                id="zipCode"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Save -->
+      <div class="container-sm mt-2">
+        <button class="btn btn-primary btn-sm px-4 rounded-1">Add</button>
+      </div>
+
+      <section class="project-panel my-3 sectionBg">
+        <div class="row my-2">
+          <span>Result</span>
+        </div>
+        <hr />
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="table-overview">
+              <tr>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Abbreviation</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">Contact Department</th>
+                <th scope="col">Contact Email</th>
+                <th scope="col">Contact Phone</th>
+                <th scope="col">Country</th>
+                <th scope="col">Credit Limit</th>
+                <th scope="col">Sales Person</th>
+                <th scope="col">State</th>
+                <th scope="col">Tax Registration</th>
+                <th scope="col">Payment Term</th>
+                <th scope="col">Zip Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </form>
+  </section>
+</main>

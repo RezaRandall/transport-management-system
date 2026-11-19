@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
 import { Layout } from './pages/layout/layout';
 import { Dashboard } from './pages/dashboard/dashboard';
-import { Booking } from './pages/booking/booking';
 import { Overview } from './pages/overview/overview';
 import { Create } from './pages/create/create';
 import { Road } from './pages/road/road';
@@ -10,7 +9,11 @@ import { TransmittalDocument } from './pages/transmittal-document/transmittal-do
 import { BankPayment } from './pages/bank-payment/bank-payment';
 import { Imprest } from './pages/imprest/imprest';
 import { Customer } from './pages/customer/customer';
-import { Clerk } from './pages/clerk/clerk';
+import { Employee } from './pages/employee/employee';
+import { ContractOverview } from './pages/contract-overview/contract-overview';
+import { FormContractCustomer } from './reusables/form-contract-customer/form-contract-customer';
+import { FormContractEmployee } from './reusables/form-contract-employee/form-contract-employee';
+import { FormContractDriver } from './reusables/form-contract-driver/form-contract-driver';
 import { Driver } from './pages/driver/driver';
 
 export const routes: Routes = [
@@ -61,12 +64,28 @@ export const routes: Routes = [
         component: Customer,
       },
       {
-        path: 'clerk',
-        component: Clerk,
+        path: 'employee',
+        component: Employee,
       },
       {
         path: 'driver',
         component: Driver,
+      },
+      {
+        path: 'contract-overview',
+        component: ContractOverview,
+      },
+      {
+        path: 'contract-customer',
+        component: FormContractCustomer,
+      },
+      {
+        path: 'contract-employee',
+        component: FormContractEmployee,
+      },
+      {
+        path: 'contract-driver',
+        component: FormContractDriver,
       },
     ],
   },

@@ -8,38 +8,59 @@
     <div class="sidebar-section-label">WORKSPACE</div>
     <nav class="sidebar-nav">
       <label
-        class="nav-item active dashboard-option"
+        class="nav-item dashboard-option"
+        [class.active]="isActiveRoute('/admin/dashboard')"
         for="nav-dashboard"
         routerLink="/admin/dashboard"
       >
-        <input id="nav-dashboard" name="sidebarDestination" type="radio" checked />
+        <input
+          id="nav-dashboard"
+          name="sidebarDestination"
+          type="radio"
+          [checked]="isActiveRoute('/admin/dashboard')"
+        />
         <i class="fa-solid fa-cubes"></i>
         <span>Dashboard</span>
       </label>
-      <details class="nav-dropdown">
+      <details #sidebarMenu class="nav-dropdown" name="sidebarMenu" data-menu="booking">
         <summary class="nav-item">
           <i class="fa-solid fa-book"></i>
           <span>Booking</span><span class="nav-count">8</span><span class="nav-chevron"></span>
         </summary>
         <div class="nav-submenu">
           <label class="submenu-option" for="nav-overview" routerLink="/admin/overview">
-            <input id="nav-overview" name="sidebarDestination" type="radio" />
+            <input
+              id="nav-overview"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/overview')"
+            />
             <span>Overview</span>
           </label>
           <label class="submenu-option" for="nav-create" routerLink="/admin/create">
-            <input id="nav-create" name="sidebarDestination" type="radio" />
+            <input
+              id="nav-create"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/create')"
+            />
             <span>Create</span>
           </label>
         </div>
       </details>
-      <details class="nav-dropdown">
+      <details #sidebarMenu class="nav-dropdown" name="sidebarMenu" data-menu="job-order">
         <summary class="nav-item">
           <i class="fa-solid fa-chart-pie"></i>
           <span>Job Order</span><span class="nav-chevron"></span>
         </summary>
         <div class="nav-submenu">
           <label class="submenu-option" for="nav-road" routerLink="/admin/road">
-            <input id="nav-road" name="sidebarDestination" type="radio" />
+            <input
+              id="nav-road"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/road')"
+            />
             <span>Road</span>
           </label>
           <label
@@ -47,43 +68,86 @@
             for="nav-transmittal"
             routerLink="/admin/transmittial-document"
           >
-            <input id="nav-transmittal" name="sidebarDestination" type="radio" />
+            <input
+              id="nav-transmittal"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/transmittial-document')"
+            />
             <span>Transmittal Document</span>
           </label>
         </div>
       </details>
-      <details class="nav-dropdown">
+      <details #sidebarMenu class="nav-dropdown" name="sidebarMenu" data-menu="finance">
         <summary class="nav-item">
           <i class="fa-solid fa-money-bill-wheat"></i>
           <span>Finance</span><span class="nav-chevron"></span>
         </summary>
         <div class="nav-submenu">
           <label class="submenu-option" for="nav-imprest" routerLink="/admin/imprest">
-            <input id="nav-imprest" name="sidebarDestination" type="radio" />
+            <input
+              id="nav-imprest"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/imprest')"
+            />
             <span>Imprest</span>
           </label>
           <label class="submenu-option" for="nav-bank-payment" routerLink="/admin/bank-payment">
-            <input id="nav-bank-payment" name="sidebarDestination" type="radio" />
+            <input
+              id="nav-bank-payment"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/bank-payment')"
+            />
             <span>Bank Payment</span>
           </label>
         </div>
       </details>
-      <details class="nav-dropdown">
+      <details #sidebarMenu class="nav-dropdown" name="sidebarMenu" data-menu="contract">
         <summary class="nav-item">
           <i class="fa-solid fa-pen-to-square"></i>
           <span>Contract</span><span class="nav-chevron"></span>
         </summary>
         <div class="nav-submenu">
+          <label
+            class="submenu-option"
+            for="nav-contract-overview"
+            routerLink="/admin/contract-overview"
+          >
+            <input
+              id="nav-contract-overview"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/contract-overview')"
+            />
+            <span>Contract Overview</span>
+          </label>
           <label class="submenu-option" for="nav-customer" routerLink="/admin/customer">
-            <input id="nav-customer" name="sidebarDestination" type="radio" />
+            <input
+              id="nav-customer"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/customer')"
+            />
             <span>Customer</span>
           </label>
-          <label class="submenu-option" for="nav-clerk" routerLink="/admin/clerk">
-            <input id="nav-clerk" name="sidebarDestination" type="radio" />
-            <span>Clerk</span>
+          <label class="submenu-option" for="nav-employee" routerLink="/admin/employee">
+            <input
+              id="nav-employee"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/employee')"
+            />
+            <span>Employee</span>
           </label>
           <label class="submenu-option" for="nav-driver" routerLink="/admin/driver">
-            <input id="nav-driver" name="sidebarDestination" type="radio" />
+            <input
+              id="nav-driver"
+              name="sidebarDestination"
+              type="radio"
+              [checked]="isActiveRoute('/admin/driver')"
+            />
             <span>Driver</span>
           </label>
         </div>

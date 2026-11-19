@@ -1,0 +1,172 @@
+<main class="overviews-page">
+  <header class="overviews-page__header">
+    <div>
+      <h1>New Employee</h1>
+    </div>
+  </header>
+
+  <section class="project-panel project-form" aria-labelledby="project-form-title">
+    <div class="project-panel__heading">
+      <div>
+        <p class="projects-page__eyebrow">Employee Information</p>
+      </div>
+    </div>
+
+    <form class="container-fluid">
+      <!-- BARIS 1: First Name & Last Name  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: First Name -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="firstName">
+              First Name <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="firstName"
+                class="form-control"
+                id="firstName"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Last Name -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="lastName">
+              Last Name <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="lastName"
+                class="form-control"
+                id="lastName"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 2: User Name & phone  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: User Name -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="userName">
+              User Name <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="userName"
+                class="form-control"
+                id="userName"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: phone -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="phone">
+              Phone <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-5">
+              <input formControlName="phone" class="form-control" id="phone" type="text" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 3: Email Employee & Office Name  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Email Employee -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="emailEmployee">
+              Email Employee <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="emailEmployee"
+                class="form-control"
+                id="emailEmployee"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Office Name -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="officeName">
+              Office Name
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="officeName"
+                class="form-control"
+                id="officeName"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 4: Role   -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Role -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="role"> Role </label>
+            <div class="col-sm-8">
+              <input type="text" formControlName="role" class="form-control" id="role" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Save -->
+      <div class="container-sm mt-2">
+        <button class="btn btn-primary btn-sm px-4 rounded-1">Add</button>
+      </div>
+    </form>
+    <section class="project-panel my-3 sectionBg">
+      <div class="row my-2">
+        <span>Result</span>
+      </div>
+      <hr />
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="table-overview">
+            <tr>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">User Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Email Employee</th>
+              <th scope="col">Office Name</th>
+              <th scope="col">Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+</main>

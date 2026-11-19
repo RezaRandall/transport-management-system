@@ -16,15 +16,16 @@
     </div>
 
     <form class="container-fluid">
-      <div class="row mb-3">
+      <!-- BARIS 1: Customer & Date -->
+      <div class="row mb-3 align-items-center">
         <!-- Kolom Kiri: Customer -->
-        <div class="col-12 col-lg-6">
+        <div class="col-md-6">
           <div class="row align-items-center">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
               Customer <span class="text-danger">*</span>
             </label>
             <div class="col-sm-8">
-              <select class="form-select" id="customerName">
+              <select class="form-select form-select-sm" id="customerName">
                 <option value="">Select Customer</option>
                 <option value="1">PT FASTANA LOGISTIK INDONESIA</option>
                 <option value="2">PT. CARGILL INDONESIA</option>
@@ -34,7 +35,7 @@
           </div>
         </div>
         <!-- Kolom Kanan: Date -->
-        <div class="col-12 col-lg-6">
+        <div class="col-md-6">
           <div class="row align-items-center">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="booking-date">
               Date <span class="text-danger">*</span>
@@ -42,7 +43,7 @@
             <div class="col-sm-5">
               <input
                 formControlName="bookingDate"
-                class="form-control"
+                class="form-control input-xs"
                 id="booking-date"
                 type="date"
                 value=""
@@ -52,9 +53,9 @@
         </div>
       </div>
       <!-- BARIS 2: Reference No & Reference Date -->
-      <div class="row mb-3">
+      <div class="row mb-3 align-items-center">
         <!-- Kolom Kiri: Reference No. -->
-        <div class="col-12 col-lg-6">
+        <div class="col-md-6">
           <div class="row align-items-center">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="referenceNo">
               Reference No. <span class="text-danger">*</span>
@@ -70,7 +71,7 @@
           </div>
         </div>
         <!-- Kolom Kanan: Reference Date -->
-        <div class="col-12 col-lg-6">
+        <div class="col-md-6">
           <div class="row align-items-center">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="referenceDate">
               Reference Date
@@ -82,9 +83,9 @@
         </div>
       </div>
       <!-- BARIS 3: Shipper & Consignee -->
-      <div class="row mb-3">
+      <div class="row mb-3 align-items-center">
         <!-- Kolom Kiri: Shipper + Checkbox -->
-        <div class="col-12 col-lg-6">
+        <div class="col-md-6">
           <div class="row">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="shipper">
               Shipper
@@ -102,7 +103,7 @@
           </div>
         </div>
         <!-- Kolom Kanan: Consignee + Checkbox -->
-        <div class="col-12 col-lg-6">
+        <div class="col-md-6">
           <div class="row">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="consignee">
               Consignee
@@ -121,9 +122,9 @@
         </div>
       </div>
       <!-- BARIS 4: Shipper Ref & Consignee Ref -->
-      <div class="row mb-3">
+      <div class="row mb-3 align-items-center">
         <!-- Kolom Kiri: Shipper Ref. No/Date -->
-        <div class="col-12 col-lg-6">
+        <div class="col-md-6">
           <div class="row align-items-center">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" style="line-height: 1.2">
               Shipper Ref.<br />No/Date
@@ -141,7 +142,7 @@
           </div>
         </div>
         <!-- Kolom Kanan: Consignee Ref. No/Date -->
-        <div class="col-12 col-lg-6">
+        <div class="col-md-6">
           <div class="row align-items-center">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" style="line-height: 1.2">
               Consignee Ref.<br />No/Date
@@ -160,8 +161,8 @@
         </div>
       </div>
       <!-- BARIS 5: Remarks (Hanya di Kiri penuh bawah) -->
-      <div class="row mb-3">
-        <div class="col-12 col-lg-6">
+      <div class="row mb-3 align-items-center">
+        <div class="col-md-6">
           <div class="row">
             <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="remarks">
               Remarks

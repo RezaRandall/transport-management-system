@@ -1,1 +1,280 @@
-<p>driver works!</p>
+<main class="overviews-page">
+  <header class="overviews-page__header">
+    <div>
+      <h1>New Driver</h1>
+    </div>
+  </header>
+
+  <section class="project-panel project-form" aria-labelledby="project-form-title">
+    <div class="project-panel__heading">
+      <div>
+        <p class="projects-page__eyebrow">Driver Information</p>
+      </div>
+    </div>
+
+    <form class="container-fluid">
+      <!-- BARIS 1: Driver Name & Phone No  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Driver Name -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="driverName">
+              Driver Name <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="driverName"
+                class="form-control"
+                id="driverName"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Phone No -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="phone">
+              Phone <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-5">
+              <input formControlName="phone" class="form-control" id="phone" type="text" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 2: Address & Gender  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Address -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="address">
+              Address <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="address"
+                class="form-control"
+                id="address"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Gender -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="gender">
+              Gender <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="gender"
+                class="form-control"
+                id="gender"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 3: Date of Birth & Join Date  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Date of Birth -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="dateOfBirth">
+              Date of Birth <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="dateOfBirth"
+                class="form-control"
+                id="dateOfBirth"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: Join Date -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="joinDate">
+              Join Date <span class="text-danger">*</span>
+            </label>
+            <div class="col-sm-5">
+              <input
+                formControlName="joinDate"
+                class="form-control"
+                id="joinDate"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 4: Religion & KK No  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Religion -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="religion">
+              Religion
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="religion"
+                class="form-control"
+                id="religion"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: KK No -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="kkNo"> KK No </label>
+            <div class="col-sm-8">
+              <input type="text" formControlName="kkNo" class="form-control" id="kkNo" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 4: KTP No & SIM No  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: KTP No -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="ktpNo"> KTP No </label>
+            <div class="col-sm-8">
+              <input type="text" formControlName="ktpNo" class="form-control" id="ktpNo" value="" />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: SIM No -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="simNo"> SIM No </label>
+            <div class="col-sm-8">
+              <input type="text" formControlName="simNo" class="form-control" id="simNo" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 4: SIM Type & SIM expiry  -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: SIM Type -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="simType">
+              SIM Type
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="simType"
+                class="form-control"
+                id="simType"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Kolom Kanan: SIM Expiry -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="simExpiry">
+              SIM Expiry
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="simExpiry"
+                class="form-control"
+                id="simExpiry"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BARIS 4: Bank No   -->
+      <div class="row mb-3">
+        <!-- Kolom Kiri: Bank No -->
+        <div class="col-12 col-lg-6">
+          <div class="row align-items-center">
+            <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="bankNo">
+              Bank No
+            </label>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                formControlName="bankNo"
+                class="form-control"
+                id="bankNo"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Save -->
+      <div class="container-sm mt-2">
+        <button class="btn btn-primary btn-sm px-4 rounded-1">Add</button>
+      </div>
+
+      <section class="project-panel my-3 sectionBg">
+        <div class="row my-2">
+          <span>Result</span>
+        </div>
+        <hr />
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="table-overview">
+              <tr>
+                <th scope="col">Driver Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Join Date</th>
+                <th scope="col">Religion</th>
+                <th scope="col">KK No</th>
+                <th scope="col">KTP No</th>
+                <th scope="col">SIM No</th>
+                <th scope="col">SIM Type</th>
+                <th scope="col">SIM Expiry</th>
+                <th scope="col">Bank No</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </form>
+  </section>
+</main>

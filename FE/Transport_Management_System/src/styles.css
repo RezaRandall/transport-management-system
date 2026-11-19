@@ -213,3 +213,51 @@ input {
   font-weight: 800;
   letter-spacing: 0.08em;
 }
+
+/* .input-xs {
+  min-height: 31px !important;
+  height: 31px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+} */
+
+/* Berlaku otomatis untuk semua <input class="form-control"> dan <select class="form-select"> */
+.form-control,
+.form-select {
+  min-height: 31px !important;
+  height: 31px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+}
+
+/* Khusus <select> agar ikon panah bawah tidak terpotong oleh padding kanan */
+.form-select {
+  padding-right: 1.75rem;
+  background-position: right 0.5rem center;
+  background-size: 12px 10px;
+}
+
+/* Khusus <textarea> agar tingginya tidak terkunci di 26px */
+textarea.form-control {
+  height: auto;
+  min-height: 60px !important;
+}
+
+/* Agar tombol/ikon di dalam .input-group ikut ramping sejajar */
+.input-group > .btn,
+.input-group-text {
+  min-height: 31px !important;
+  height: 31px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sectionBg {
+  background-color: #e1e1e1;
+  padding: 20px;
+  border-radius: 5px;
+}

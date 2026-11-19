@@ -1,0 +1,33 @@
+/*date picker*/
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+.custom-day.focused {
+  background-color: #e6e6e6;
+}
+.custom-day.range,
+.custom-day:hover {
+  background-color: rgb(2, 117, 216);
+  color: white;
+}
+.custom-day.faded {
+  background-color: rgba(2, 117, 216, 0.5);
+}
+
+/* Table */
+.table-overview th {
+  border-color: var(--project-teal);
+  color: #fff;
+  background: var(--project-teal);
+  font-size: 13px; /* Menggunakan ukuran absolut (px/rem) lebih stabil daripada persen */
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 12px; /* Memberikan ruang di dalam cell agar tidak menumpuk */
+  border: 1px solid #e0e0e0;
+  white-space: nowrap; /* Mencegah teks turun ke bawah/membungkus */
+}

@@ -1,0 +1,28 @@
+<main class="overviews-page">
+  <header class="overviews-page__header">
+    <div>
+      <h1>Contract Overview</h1>
+    </div>
+  </header>
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <button ngbNavLink>Customer</button>
+      <ng-template ngbNavContent> </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <button ngbNavLink>Employee</button>
+      <ng-template ngbNavContent> </ng-template>
+    </li>
+    <li [ngbNavItem]="3">
+      <button ngbNavLink>Driver</button>
+      <ng-template ngbNavContent let-active> </ng-template>
+    </li>
+  </ul>
+  @if (active() === 1) {
+    <app-form-contract-customer> </app-form-contract-customer>
+  } @else if (active() === 2) {
+    <app-form-contract-employee> </app-form-contract-employee>
+  } @else {
+    <app-form-contract-driver> </app-form-contract-driver>
+  }
+</main>

@@ -1,0 +1,176 @@
+<section class="project-panel project-form" aria-labelledby="project-form-title">
+  <div class="project-panel__heading">
+    <div>
+      <p class="projects-page__eyebrow">Search Contract</p>
+    </div>
+  </div>
+
+  <form class="container-fluid">
+    <!-- BARIS 1: Customer Name & City  -->
+    <div class="row mb-3">
+      <!-- Kolom Kiri: Customer Name -->
+      <div class="col-12 col-lg-6">
+        <div class="row align-items-center">
+          <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="customerName">
+            Customer Name
+          </label>
+          <div class="col-sm-8">
+            <input
+              type="text"
+              formControlName="customerName"
+              class="form-control"
+              id="customerName"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6 d-flex justify-content-end">
+        <input
+          formControlName="newBooking"
+          class="btn btn-warning"
+          id="new-booking"
+          name="newBooking"
+          type="button"
+          value="New Customer"
+          routerLink="/admin/customer"
+        />
+      </div>
+    </div>
+    <!-- BARIS 2: Contact phone & Contact Email  -->
+    <div class="row mb-3">
+      <!-- Kolom Kiri: Contact Phone -->
+      <div class="col-12 col-lg-6">
+        <div class="row align-items-center">
+          <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="contactPhone">
+            Contact Phone
+          </label>
+          <div class="col-sm-8">
+            <input
+              type="text"
+              formControlName="contactPhone"
+              class="form-control"
+              id="contactPhone"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BARIS 2: Tax Registration & Payment Terms  -->
+    <div class="row mb-3">
+      <!-- Kolom Kiri: Tax Registration -->
+      <div class="col-12 col-lg-6">
+        <div class="row align-items-center">
+          <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="taxRegistration">
+            Tax Registration
+          </label>
+          <div class="col-sm-8">
+            <input
+              type="text"
+              formControlName="taxRegistration"
+              class="form-control"
+              id="taxRegistration"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Kolom Kanan: City -->
+      <div class="col-12 col-lg-6">
+        <div class="row align-items-center">
+          <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="city"> City </label>
+          <div class="col-sm-5">
+            <input formControlName="city" class="form-control" id="city" type="text" value="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <!-- Kolom Kanan: Payment Terms -->
+      <div class="col-12 col-lg-6">
+        <div class="row align-items-center">
+          <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="paymentTerms">
+            Payment Terms
+          </label>
+          <div class="col-sm-8">
+            <input
+              type="text"
+              formControlName="paymentTerms"
+              class="form-control"
+              id="paymentTerms"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Kolom Kanan: Contact Email -->
+      <div class="col-12 col-lg-6">
+        <div class="row align-items-center">
+          <label class="col-sm-4 col-form-label text-sm-end fw-bold" for="contactEmail">
+            Contact Email
+          </label>
+          <div class="col-sm-8">
+            <input
+              type="email"
+              formControlName="contactEmail"
+              class="form-control"
+              id="contactEmail"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Search Button -->
+    <div class="container-sm mt-2">
+      <button class="btn btn-primary btn-sm px-4 rounded-1">Search</button>
+    </div>
+  </form>
+</section>
+<section class="project-panel my-3">
+  <div class="row my-2">
+    <span>Result</span>
+  </div>
+  <hr />
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="table-overview">
+        <tr>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Abbreviation</th>
+          <th scope="col">Address</th>
+          <th scope="col">City</th>
+          <th scope="col">Contact Department</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Country</th>
+          <th scope="col">Credit Limit</th>
+          <th scope="col">Sales Person</th>
+          <th scope="col">State</th>
+          <th scope="col">Tax Registration</th>
+          <th scope="col">Payment Term</th>
+          <th scope="col">Zip Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>* Click search to view data</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
